@@ -19,15 +19,16 @@
           this.state = {
             jenisBensin: "premium",
             price: 0,
+            jumlahLiter: 0
           };
         }
 
         updateName = (newName) => {
           this.setState({ jenisBensin: newName });
-          this.updatePrice(newName);
+          this.updatePrice(newName, this.state.jumlahLiter);
         };
 
-        updatePrice = (jenisBensin) => {
+        updatePrice = (jenisBensin, jumlahLiter) => {
           let harga = 0;
           if (jenisBensin === "premium") {
             harga = 10000;
@@ -36,7 +37,14 @@
           } else if (jenisBensin === "pertamax") {
             harga = 15000;
           }
-          this.setState({ price: harga });
+          const totalHarga = harga * jumlahLiter;
+          this.setState({ price: totalHarga });
+        };
+
+        handleLiterChange = (e) => {
+          const newJumlahLiter = parseInt(e.target.value);
+          this.setState({ jumlahLiter: newJumlahLiter });
+          this.updatePrice(this.state.jenisBensin, newJumlahLiter);
         };
 
         render() {
@@ -60,6 +68,14 @@
                   <option value="pertalite">Pertalite</option>
                   <option value="pertamax">Pertamax</option>
                 </select>
+                <br />
+                <label htmlFor="jumlahLiter">Jumlah Liter:</label>
+                <input 
+                  type="number" 
+                  id="jumlahLiter" 
+                  value={this.state.jumlahLiter}
+                  onChange={this.handleLiterChange}
+                />
             </div>
           );
         }
