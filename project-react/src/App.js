@@ -10,13 +10,15 @@ import HookContext from "./HookContext";
 import Counter from "./HookReducer";
 import HookCallback from "./HookCallback";
 import ItemList from "./ItemList";
+import GetApi from "./GetApi";
+import GetApiGames from "./GetApiGames";
 import "tailwindcss/tailwind.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FlexItems />
+        {/* <FlexItems />
         <Button label="click" onClick={() => console.log("Button Clicked")} />
         <Title />
         <GridTailwind />
@@ -25,7 +27,9 @@ function App() {
         <HookContext />
         <Counter />
         <HookCallback />
-        <ItemList />
+        <ItemList /> */}
+        {/* <GetApi /> */}
+        <GetApiGames />
       </header>
     </div>
   );
