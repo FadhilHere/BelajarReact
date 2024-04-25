@@ -21,7 +21,7 @@ const ToggleButton = () => {
 
   return (
     <button onClick={handleClick} style={buttonStyle}>
-      {isBlack ? "Putih" : "Hitam"}
+      {isBlack ? "Hitam" : "Putih"}
     </button>
   );
 };

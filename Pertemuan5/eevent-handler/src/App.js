@@ -16,18 +16,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button />
-        <Toolbar />
-        <Form />
-        <HandleForm />
-        <KeyboardEvent />
-        <EventPropagation />
+        {/* <Button /> */}
+        {/* <Toolbar /> */}
+        {/* <Form /> */}
+        {/* <HandleForm /> */}
+        {/* <KeyboardEvent /> */}
+        {/* <EventPropagation /> */}
         {/* <FormWithValidation /> */}
-        <PassParameter />
-        <Synthetic />
-        <ItemList />
-        <ToggleButton />
-        <FormRegister />
+        {/* <PassParameter /> */}
+        {/* <Synthetic /> */}
+        {/* <ItemList /> */}
+        {/* <ToggleButton /> */}
+        <FormRegister /> 
       </header>
     </div>
   );
